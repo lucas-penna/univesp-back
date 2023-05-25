@@ -30,9 +30,5 @@ public class ClienteController extends AbstractCrudController<Cliente> {
         return ResponseEntity.ok(this.clienteService.read(pageable, filter));
     }
 
-    @PostMapping(value = "/create-client")
-    public ResponseEntity<?> createClient(Cliente cliente) {
-        this.clienteService.create(cliente);
-        return ResponseEntity.ok().build();
-    }
+
 }
